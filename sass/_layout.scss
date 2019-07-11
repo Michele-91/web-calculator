@@ -21,8 +21,9 @@
     justify-items: center;
     
     &-1 {
-        .btn-4 {
+        .btn-ce {
             background-color: $color-bg-ce;
+            grid-column: 1 / 3;
 
             &:hover {
                 background-color: $color-bg-ce-light;
@@ -43,8 +44,9 @@
     }
 
     &-5 {
-        .btn-19 {
+        .btn-equal {
             background-color: rgb(28, 144, 245);
+            grid-column: 3 / 5;
 
             &:hover {
                 background-color: $color-bg-equal-light;
@@ -69,10 +71,13 @@
     // padding-bottom: 1.8rem;
 
     &:hover {
-        background-color: rgb(197, 211, 160);
+        background-color: $color-generic-hover;
         // box-shadow:  0 0 0 1px rgba(39, 43, 37, 0.678);
         color: black;
         cursor: pointer;
+    }
+    &:active {
+        background-color: $color-generic-active;
     }
 
 }
