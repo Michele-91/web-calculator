@@ -21,14 +21,14 @@
     justify-items: center;
     
     &-1 {
-        .btn-ce {
-            background-color: $color-bg-ce;
-            grid-column: 1 / 3;
+        // .btn-ce {
+        //     background-color: $color-bg-ce;
+        //     grid-column: 1 / 3;
 
-            &:hover {
-                background-color: $color-bg-ce-light;
-            }
-        }
+        //     &:hover {
+        //         background-color: $color-bg-ce-light;
+        //     }
+        // }
     }
 
     &-2 {
@@ -44,15 +44,15 @@
     }
 
     &-5 {
-        .btn-equal {
-            background-color: rgb(28, 144, 245);
-            grid-column: 3 / 5;
+        // .btn-equal {
+        //     background-color: rgb(28, 144, 245);
+        //     grid-column: 3 / 5;
 
-            &:hover {
-                background-color: $color-bg-equal-light;
-                box-shadow:  0 0 0 1px $color-bg-equal;
-            }
-        }
+        //     &:hover {
+        //         background-color: $color-bg-equal-light;
+        //         box-shadow:  0 0 0 1px $color-bg-equal;
+        //     }
+        // }
     }
 }
 
@@ -78,6 +78,26 @@
     }
     &:active {
         background-color: $color-generic-active;
+    }
+
+
+    &-ce {
+        background-color: $color-bg-ce;
+        grid-column: 1 / 3;
+
+        &:hover {
+                background-color: $color-bg-ce-light;
+            }
+    }
+
+    &-equal {
+        background-color: rgb(28, 144, 245);
+        grid-column: 3 / 5;
+
+        &:hover {
+            background-color: $color-bg-equal-light;
+            box-shadow:  0 0 0 1px $color-bg-equal;
+            }
     }
 
 }
