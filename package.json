@@ -11,5 +11,7 @@
   "devDependencies": {
     "node-sass": "^4.12.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.14"
+  }
 }
