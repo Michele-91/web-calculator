@@ -72,7 +72,6 @@ const sign = function(sign) {
 };
 
 const insertOperands = function(operand, sign) {
-    // operand = Number(operand);
     expression.push(operand);
     expression.push(sign);
     console.log(expression);
@@ -83,11 +82,11 @@ const calculateResult = function(expression) {
     for(let val of expression) {
         finalEx += `${val}`;
     }
-    let number = finalEx.match(/\d+|\+\d+|\-\d+/g)
+    let result = finalEx.match(/\d+|\+\d+|\-\d+/g)
         .reduce(function (a, b) {
             return Number(a) + Number(b)
         });
-    console.log(number);
+    console.log(result);
     // document.querySelector(".screen").innerHTML = number;
 };
 
