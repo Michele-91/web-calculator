@@ -30,7 +30,16 @@ body {
   border: 0.5rem solid #5c5656;
   background-color: black;
   grid-column: start-line / end-line;
-  text-align: right; }
+  color: white;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: .7rem;
+  z-index: 1; }
+  .screen__display {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem; }
 
 .row {
   padding-top: 3rem;
