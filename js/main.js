@@ -1,66 +1,96 @@
 
+
+let num = [];
+let expression = [];
+
 document.body.addEventListener("click", function(e) {
     let clicked = e.target.classList[1];
     switch(clicked) {
         case "btn-ce":
-            console.log(clicked);
             break;
         case "btn-percentage":
-            console.log(clicked);
+            sign(e.target.textContent);
             break;
         case "btn-division":
-            console.log(clicked);
+            sign(e.target.textContent);
             break;
         case "btn-seven":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-eight":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-nine":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-multiplication":
-            console.log(clicked);
+            sign(e.target.textContent);
             break;
         case "btn-four":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-five":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break; 
         case "btn-six":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-minus":
-            console.log(clicked);
+            sign(e.target.textContent);
             break;
         case "btn-one":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-two":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-three":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-plus":
-            console.log(clicked);
+            sign(e.target.textContent);
             break;
         case "btn-zero":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-dot":
-            console.log(clicked);
+            num.push(e.target.textContent);
             break;
         case "btn-equal":
-            console.log(clicked);
+            sign(e.target.textContent);
+            calculateResult(expression);
             break;
         default: 
-            console.log("area clicked wasn't setup");
+            console.dir("area clicked wasn't setup");
             break;
     }
 });
+
+const sign = function(sign) {
+    insertOperands(num.join(''), sign);
+    num.length = 0;
+};
+
+const insertOperands = function(operand, sign) {
+    // operand = Number(operand);
+    expression.push(operand);
+    expression.push(sign);
+    console.log(expression);
+};
+
+const calculateResult = function(expression) {
+    let finalEx = ``;
+    for(let val of expression) {
+        finalEx += `${val}`;
+    }
+    let number = finalEx.match(/\d+|\+\d+|\-\d+/g)
+        .reduce(function (a, b) {
+            return Number(a) + Number(b)
+        });
+    console.log(number);
+    // document.querySelector(".screen").innerHTML = number;
+};
+
 
 
 // btn-percentage
