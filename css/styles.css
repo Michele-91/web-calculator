@@ -68,17 +68,34 @@ body {
   .btn:hover {
     background-color: #c5d3a0;
     color: black;
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0 0 0 3px #b8f01d; }
   .btn:active {
-    background-color: #b0c37d; }
+    background-color: #b0c37d;
+    transform: translateY(2px);
+    box-shadow: 0 0 0 3px #c5d3a0; }
   .btn-ce {
-    background-color: rgba(194, 48, 48, 0.671);
+    background-color: #cf3e3e;
     grid-column: 1 / 3; }
     .btn-ce:hover {
-      background-color: rgba(212, 81, 81, 0.671); }
+      background-color: #e08b8b;
+      box-shadow: 0 0 0 3px #cf3e3e; }
+    .btn-ce:active {
+      background-color: #c33030;
+      box-shadow: 0 0 0 3px #e08b8b;
+      color: white; }
   .btn-equal {
     background-color: #1c90f5;
     grid-column: 3 / 5; }
     .btn-equal:hover {
       background-color: #7ec0f9;
-      box-shadow: 0 0 0 1px #1c90f5; }
+      box-shadow: 0 0 0 3px #1c90f5; }
+    .btn-equal:active {
+      background-color: #0976d5;
+      box-shadow: 0 0 0 3px #1c90f5;
+      color: white; }
+  .btn-modulo {
+    font-size: 1.2rem; }
+    .btn-modulo span {
+      display: block;
+      transform: translateX(-0.32rem); }

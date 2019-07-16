@@ -82,13 +82,17 @@
     // padding-bottom: 1.8rem;
 
     &:hover {
-        background-color: $color-generic-hover;
+        background-color: $color-generic-light;
         // box-shadow:  0 0 0 1px rgba(39, 43, 37, 0.678);
         color: black;
         cursor: pointer;
+        // transform: translateY(-2px);
+        box-shadow:  0 0 0 3px $color-generic;
     }
     &:active {
         background-color: $color-generic-active;
+        transform: translateY(2px);
+        box-shadow:  0 0 0 3px $color-generic-light;
     }
 
 
@@ -97,18 +101,37 @@
         grid-column: 1 / 3;
 
         &:hover {
-                background-color: $color-bg-ce-light;
-            }
+            background-color: $color-bg-ce-light;
+            // color: rgb(148, 0, 0);
+            box-shadow:  0 0 0 3px $color-bg-ce;
+        }
+        &:active {
+            background-color: $color-bg-ce-active;
+            box-shadow:  0 0 0 3px $color-bg-ce-light;
+            color: white;        }
     }
 
     &-equal {
-        background-color: rgb(28, 144, 245);
+        background-color: $color-bg-equal;
         grid-column: 3 / 5;
 
         &:hover {
             background-color: $color-bg-equal-light;
-            box-shadow:  0 0 0 1px $color-bg-equal;
-            }
+            box-shadow:  0 0 0 3px $color-bg-equal;
+        }
+        &:active {
+            background-color: $color-bg-equal-active;
+            box-shadow:  0 0 0 3px $color-bg-equal;
+            color: white;
+        }
+    }
+
+    &-modulo {
+        font-size: 1.2rem;
+        span {
+            display: block;
+            transform: translateX(-.32rem);
+        }
     }
 
 }

@@ -29,7 +29,7 @@ document.body.addEventListener("click", function(e) {
         case "btn-ce":
             reset();
             break;
-        case "btn-percentage":
+        case "btn-modulo":
             sign(e.target.textContent);
             signDisplay(e.target.textContent);
             break;
@@ -50,7 +50,7 @@ document.body.addEventListener("click", function(e) {
             numDisplay(e.target.textContent);
             break;
         case "btn-multiplication":
-            sign(e.target.textContent);
+            sign("*");
             signDisplay(e.target.textContent);
             break;
         case "btn-four":

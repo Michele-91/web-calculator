@@ -1,8 +1,18 @@
 
 $color-bg-btn: rgb(58, 53, 53);
-$color-bg-ce: rgba(194, 48, 48, 0.671);
-$color-bg-ce-light: lighten($color-bg-ce, 10%); 
+$color-bg-ce: rgb(207, 62, 62);
+$color-bg-ce-light: rgb(224, 139, 139);
+$color-bg-ce-active: darken($color-bg-ce, 5%);
+// $color-border-ce: rgb(224, 139, 139);
+// $color-bg-ce-light: lighten($color-bg-ce, 40%); 
+
 $color-bg-equal: rgb(28, 144, 245);
 $color-bg-equal-light: lighten($color-bg-equal, 20%);
-$color-generic-hover: rgb(197, 211, 160);
-$color-generic-active: darken($color-generic-hover, 10%);
+$color-bg-equal-active: darken($color-bg-equal, 10%);
+// $color-border-equal: rgb(224, 139, 139);
+
+
+
+$color-generic: rgb(184, 240, 29);
+$color-generic-light: rgb(197, 211, 160);
+$color-generic-active: darken($color-generic-light, 10%);
