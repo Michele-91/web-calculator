@@ -5,22 +5,6 @@ let expression = [];
 let el = document.createElement('p');
 let display = document.querySelector(".screen__display");
 
-function numDisplay(content) {
-    display.textContent = num.join('');
-}
-
-function signDisplay(content, result) {
-    if(content === "=") {
-        display.textContent = result;
-    }
-}
-
-function reset() {
-    num = [];
-    expression = [];
-    display.textContent = 0;
-}
-
 
 
 document.body.addEventListener("click", function(e) {
@@ -30,6 +14,7 @@ document.body.addEventListener("click", function(e) {
             reset();
             break;
         case "btn-modulo":
+        case "text-modulo":
             sign("%");
             signDisplay(e.target.textContent);
             break;
@@ -104,6 +89,22 @@ document.body.addEventListener("click", function(e) {
     }
 });
 
+function numDisplay(content) {
+    display.textContent = num.join('');
+}
+
+function signDisplay(content, result) {
+    if (content === "=") {
+        display.textContent = result;
+    }
+}
+
+function reset() {
+    num = [];
+    expression = [];
+    display.textContent = 0;
+}
+
 const sign = function(sign) {
     insertOperands(num.join(''), sign);
     num.length = 0;
@@ -123,7 +124,7 @@ const calculateResult = function(expression) {
         }
     }
     let result = eval(finalEx);
-    // console.log(result);
+    console.log(result);
     return result;
 };
 
