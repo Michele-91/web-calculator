@@ -30,7 +30,7 @@ document.body.addEventListener("click", function(e) {
             reset();
             break;
         case "btn-modulo":
-            sign(e.target.textContent);
+            sign("%");
             signDisplay(e.target.textContent);
             break;
         case "btn-division":
@@ -123,7 +123,7 @@ const calculateResult = function(expression) {
         }
     }
     let result = eval(finalEx);
-    console.log(result);
+    // console.log(result);
     return result;
 };
 
